@@ -1,0 +1,97 @@
+.about {
+  .container {
+    display: flex;
+  }
+}
+
+.about {
+  width: 100%;
+  background-color: white;
+  margin-top: 40px;
+  box-shadow: 2px 3px 2px 0 $text-color-opacity;
+  .about__description {
+    padding: 20px 0;
+    border-bottom: 1px solid $text-color-opacity;
+    h2 {
+      font-weight: 800;
+      font-size: 1.5em;
+    }
+    p {
+      margin-top: 30px;
+      line-height: 2em;
+      font-weight: 300;
+    }
+  }
+  .about__gallery {
+    width: 100%;
+    padding: 20px 0;
+    h2 {
+      font-weight: 800;
+      padding-bottom: 20px;
+    }
+    .about__gallery-photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      img {
+        width: 49%;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.about__button {
+  margin: 20px 0;
+  button {
+    width: 100%;
+    border: none;
+    padding: 0.8em 0;
+    font-size: 1.2em;
+    font-family: $main-font;
+    font-weight: 800;
+    margin-top: 15px;
+    border-radius: 5px;
+    span {
+      margin-right: 10px;
+    }
+    &:last-of-type {
+      background-color: $background-color;
+      color: $text-color;
+    }
+    &:first-of-type {
+      background-color: $border-color;
+      color: white;
+    }
+  }
+}
+
+@include tablet {
+  .about__button {
+    margin-bottom: 20px;
+  }
+}
+
+@include desktop {
+  .about {
+    .container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    .about__description {
+      border-bottom: none;
+      width: 65%;
+      h2 {
+        font-size: 2.2em;
+      }
+    }
+    .about__gallery {
+      width: 30%;
+    }
+    .about__button {
+      width: 50%;
+    }
+  }
+}

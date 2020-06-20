@@ -1,0 +1,22 @@
+@import "./reset";
+@import "./mixins";
+@import "./settings";
+@import "./hamburger";
+@import "./welcome";
+@import "./main_section";
+@import "./about";
+@import "./footer";
+
+body {
+  background-color: #e4e4e4;
+  background-image: url(../assets/bg01.png);
+  font-family: $main-font;
+  color: $text-color;
+}
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 20px;
+}

@@ -1,0 +1,75 @@
+.welcome {
+  width: 100%;
+  padding: 60px 15px;
+  margin: 0 auto;
+  background-color: $secondary-background-color;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 2px 3px 2px 0 $text-color-opacity;
+  .welcome__text {
+    margin: 10px 0;
+    h1 {
+      font-weight: 800;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-weight: 300;
+      font-size: 1.5em;
+    }
+  }
+  .welcome__buttons {
+    width: 100%;
+    button {
+      width: 100%;
+      border: none;
+      padding: 0.8em 0;
+      font-size: 1.2em;
+      font-family: $main-font;
+      font-weight: 800;
+      margin-top: 15px;
+      border-radius: 5px;
+      span {
+        margin-right: 10px;
+      }
+      &:last-of-type {
+        background-color: $background-color;
+        color: $text-color;
+      }
+      &:first-of-type {
+        background-color: $border-color;
+        color: $secondary-text-color;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .welcome {
+    flex-direction: row;
+    justify-content: space-around;
+    .welcome__text {
+      font-size: 1.5em;
+      width: 50%;
+    }
+    .welcome__buttons {
+      width: 40%;
+      button {
+        font-size: 1.5em;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0.8em;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .welcome {
+    max-width: 1150px;
+  }
+}
