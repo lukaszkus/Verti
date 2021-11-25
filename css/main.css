@@ -419,7 +419,7 @@ main .article__text p {
   margin: 20px 0 50px 0;
 }
 .footer__credits span {
-  margin: 5px 0;
+  margin: 5px;
   display: block;
 }
 .footer__credits a {
